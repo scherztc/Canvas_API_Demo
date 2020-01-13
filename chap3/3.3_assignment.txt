@@ -1,0 +1,59 @@
+Take the following code and customize the variables and customize the course details.  
+
+Use the following documentation to set the default home page to be the syllabus  
+https://canvas.instructure.com/doc/api/courses.html#method.courses.create 
+
+You'll need to:
+1. Edit the default_view variable with the correct value
+2. Add the correct parameter to the API call
+
+Then run the script and have it upload into Canvas.
+
+# import gems
+require 'typhoeus'
+require 'json'
+require 'csv'
+
+# declare variables
+canvas_url = '' # put full canvas test url eg: https://school.test.instructure.com
+canvas_token = '' # put canvas API token here
+
+course_name = ""
+course_code = ""
+sis_course_id = ""
+hide_grades = ""
+enroll_me = ""
+###############################
+default_view = "" # Should be the home page value you want to pass
+###############################
+
+# define the API call
+create_course = Typhoeus::Request.new(
+    "#{canvas_url}/api/v1/accounts/self/courses",
+    method: :post,
+    headers: { authorization: "Bearer #{canvas_token}" },
+    params: {
+        "course[name]" => course_name,              #replaced hard coded values
+        "course[course_code]" => course_code,
+        "course[sis_course_id]" => sis_course_id,
+        "course[hide_final_grades]" => hide_grades, # when adding parameters all but the last should have a comma after it 
+        "enroll_me" => enroll_me  
+    }
+    )
+
+create_course.on_complete do |response|
+    if response.code == 200
+        data = JSON.parse(response.body)
+        puts "The course_id is #{data['id']}"
+        puts "The course_code is #{data['course_code']}"
+        puts "The sis_course_id is #{data['sis_course_id']}
+        puts "The default_view is the #{data['default_view']}
+    else
+        puts "Something went wrong! Response code was #{response.code}"
+    end
+end
+
+create_course.run
+
+Attach the screen shot of terminal with the output message.
+

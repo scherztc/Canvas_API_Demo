@@ -1,0 +1,16 @@
+canvas_course_id,course_id,integration_id,short_name,long_name,canvas_account_id,account_id,canvas_term_id,term_id,status,start_date,end_date,course_format,created_by_sis
+733,api_test_course_id_643,,Test Course 643,Test Course 643,1,,1,,unpublished,,,,true
+205,api_test_course_id_115,,Test Course 115,Test Course 115,1,,1,,unpublished,,,,true
+239,api_test_course_id_149,,Test Course 149,Test Course 149,1,,1,,unpublished,,,,true
+1117,too_many_users,,Too Many People,Too Many People,1,,1,,active,,,"",false
+726,api_test_course_id_636,,Test Course 636,Test Course 636,1,,1,,unpublished,,,,true
+111,api_test_course_id_21,,Test Course 21,Test Course 21,1,,1,,unpublished,,,,true
+200,api_test_course_id_110,,Test Course 110,Test Course 110,1,,1,,unpublished,,,,true
+314,api_test_course_id_224,,Test Course 224,Test Course 224,1,,1,,unpublished,,,,true
+71,FA16-ENG101-SA,,English 101,English 101: Introduction to Shakespear,41,subaccount1,36,term1,unpublished,,,,true
+14,sdemo-math8-000,,Grade 8 Math,8th Grade Math - ,6,,1,,active,,,"",false
+10,sdemo-telecomm-000,,Business Telecomm,Business Telecommunication Strategy and AppLeecations I - ,6,,1,,active,,,,false
+7,sdemo-psyc-000,,Intro Psychology,Introduction to Psychology - ,6,,1,,active,,,,false
+12,sdemo-amhist-000,,US History,American History - ,6,,1,,active,,,,false
+11,sdemo-biology-000,,Biology,Biology - ,6,,1,,active,,,,false
+13,sdemo-geology-000,,Intro Geology,Introduction to Geology - ,6,,1,,active,,,,false
